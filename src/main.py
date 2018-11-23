@@ -1,5 +1,4 @@
-bj = -1
-while bj != 0:
+while True:
     print("*" * 10)
     print("1、新建")
     print("2、列表")
@@ -13,5 +12,6 @@ while bj != 0:
         print(2)
     elif bj == 0:
         print("退出")
+        break
     else:
         print("err")
