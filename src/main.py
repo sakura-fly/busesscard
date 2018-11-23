@@ -1,16 +1,19 @@
+from src import tools
+
+list = []
 while True:
-    print("*" * 10)
-    print("1、新建")
-    print("2、列表")
-    print("3、查询")
-    print("0、退出")
-    print("*" * 10)
-    bj = int(input("请选择"))
-    if bj == 1:
-        print("1")
-    elif bj == 2:
-        print(2)
-    elif bj == 0:
+
+    tools.print_nemu()
+    bj = input("请选择")
+    if bj == "1":
+        tools.add(list)
+        print(list)
+    elif bj == "2":
+        tools.list(list)
+    elif bj == "3":
+        name = input("input name")
+        tools.find(list, name)
+    elif bj == "0":
         print("退出")
         break
     else:
