@@ -28,8 +28,8 @@ def find(list, name):
     for l in list:
         if l["name"] == name:
             print(l)
-            is_change = input("change ? yes/no")
-            if is_change == "yes":
+            is_change = input("change ? 1 = yes/other = no")
+            if is_change == "1":
                 update(l)
             break
     else:
@@ -37,6 +37,11 @@ def find(list, name):
 
 
 def update(people):
+    """
+    修改信息
+    :param people: 要修改的信息
+    """
     for k in people:
         v = input("input %s" % k)
+        # 三目运算符
         people[k] = people[k] if people[k] == "" else v
