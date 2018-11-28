@@ -44,4 +44,7 @@ def update(people):
     for k in people:
         v = input("input %s" % k)
         # 三目运算符
-        people[k] = people[k] if people[k] == "" else v
+        # people[k] = v if v == "" else people[k]
+
+        # 新的写法
+        people[k] = v or people[k]
